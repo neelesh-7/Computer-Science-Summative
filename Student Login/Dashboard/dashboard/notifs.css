@@ -1,0 +1,134 @@
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+:root {
+    --Circle-Red:#df3670;
+    --Circle-Green:#34c471;
+    --Circle-Orange:#ff942e;
+    --Orange-Blue:#4067f9;
+    --Notif-Bg:#fff;
+    --Notif-Bg-Hover:#fafcff;
+    --Notif-Bx: #000    ;
+    --Link:#1f1c2e;
+    --Link-Bg-Hover:#c3cff4;
+    --Link-Hover:#fff;
+    --Text:#1f1c2e;
+}
+
+.dark:root {
+    --Circle-Red:#ffd3e2;
+    --Circle-Green:#c8f7dc;
+    --Circle-Orange:#fee4cb;
+    --Orange-Blue:#d5deff;
+    --Notif-Bg:#1f2937;
+    --Notif-Bg-Hover:#243244;
+    --Notif-Bx:#e9ebf0;
+    --Link:#fff;
+    --Link-Bg-Hover:rgba(195, 207, 244, 0.1);
+    --Text:rgba(255, 255, 255, .8);
+}
+
+.notifications {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    right: 10px;
+    top: 75px;
+    z-index: 999;
+}
+
+#NotifOne, #NotifTwo, #NotifThree, #NotifFour {
+    display: none;
+}
+
+.notify {
+    width: 325px;
+    height: 70px;
+    background-color: var(--Notif-Bg);
+    border-radius: 7px;
+    box-shadow: 0 1px 4px var(--Notif-Bx);
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.notify:hover {
+    background-color: var(--Notif-Bg-Hover);
+}
+
+.notify:first-child {
+    margin: 0 0 10px 0;
+}
+
+.circle {
+    width: 41px;
+    height: 40px;
+    display: block;
+    border-radius: 100%;
+    transform: translate(17px, 17px);
+    color: var(--Notif-Bg);
+    padding: 10px 0 10px 13px;
+}
+
+.gr>.circle {
+    background-color: var(--Circle-Green);
+}
+
+.gr>.info span:first-child {
+    color: var(--Circle-Green);
+}
+
+.rd>.circle {
+    background-color: var(--Circle-Red);
+}
+
+.rd>.info span:first-child {
+    color: var(--Circle-Red);
+}
+
+.or>.circle {
+    background-color: var(--Circle-Orange);
+}
+
+.or>.info span:first-child {
+    color: var(--Circle-Orange);
+}
+
+.bl>.circle {
+    background-color: var(--Orange-Blue);
+}
+
+.bl>.info span:first-child {
+    color: var(--Orange-Blue);
+}
+
+.info {
+    width: 300px;
+    height: 70px;
+    transform: translate(70px, -35px);
+    padding: 10px;
+}
+
+.info span:first-child {
+    display: block;
+    color: var(--Circle-Green);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.info span:last-child {
+    color: var(--Text);
+    font-size: 13px;
+}
+
+.info span a {
+    color: var(--Link);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.info span a:hover {
+    color: var(--Link-Hover);
+    background-color: var(--Link-Bg-Hover);
+    border-radius: 4px;
+    transition: 0.2s
+}
